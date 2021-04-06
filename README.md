@@ -1,6 +1,6 @@
 # Django-personal-website
 
-This is a Django-based personal website I created for myself based on Vlad-moroshan's git repository
+This is a Django-based personal website I created for myself based on Vlad-moroshan's git repository  
 Live example is [here](https://fangyiyu.herokuapp.com/)
 
 # Installation and Running
