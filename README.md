@@ -7,6 +7,6 @@ Live example is [here](https://fangyiyu.herokuapp.com/)
 
 * Run the command `git clone <repository-url>` to have this repository locally in your computer
 * Change into the new directory
-* Change DUBUG to True when running on your local machine, to True when deploy
+* Change DEBUG in settings.py to True when running on your local machine, to True when deploy
 * Run the command `python manage.py runserver`
 * Open your web browser and enter the adress of your local server (usually its http://127.0.0.1:8000 )
