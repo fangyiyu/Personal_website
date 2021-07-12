@@ -11,6 +11,8 @@ from django.conf import settings
 from .forms import ContactForm
 from .models import Project
 
+
+
 class ProjectListAndFormView(SuccessMessageMixin, ListView, FormView):
     model = Project # data from database
     template_name = 'mainpage/main.html'
