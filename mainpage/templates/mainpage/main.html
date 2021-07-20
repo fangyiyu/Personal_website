@@ -73,6 +73,9 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<!-- <span class="icon-bar"></span>
+						<span class="icon-bar"></span> -->
 					</button>
 					<div class="navbar-brand">Fangyi Yu</div>
 				</div>
@@ -83,7 +86,9 @@
 						<li><a href="#services">About me</a></li>
 						<li><a href="#portfolio">Projects</a></li>
 						<li><a href="#experience">Experience and Education</a></li>
-						<!-- <li><a href="#publication">Publications</a></li> -->
+						<li><a href="#certificates">Certificates</a></li>
+						<!-- <li><a href="#">Awards</a></li>
+						<li><a href="#">Publications</a></li> -->
 					</ul>
 				</div>
 
@@ -108,9 +113,15 @@
 						<h2 class="pfblock-title">ABOUT ME</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
-							<p>I enjoy playing around with data, looking for insights and applying state-of-the-art technologies to data. Programming is a true passion of mine, and that passion continually grows with every meaningful tech-related conversation I have, with every moment of clarity as I finally figure out a nagging issue on a project, and with every new concept, language, or framework I delve into.
+							<p>I enjoy playing around with data, looking for insights and applying state-of-the-art
+								technologies to data. Programming is a true passion of mine, and that passion
+								continually grows with every meaningful tech-related conversation I have, with every
+								moment of clarity as I finally figure out a nagging issue on a project, and with every
+								new concept, language, or framework I delve into.
 							</p>
-							<p>I love academic research life and the collaborative nature of working on a team and building products. The feedback, discussion, and review in this environment bring out the best in each member and are crucial in my personal development. </p>
+							<p>I love academic research life and the collaborative nature of working on a team and
+								building products. The feedback, discussion, and review in this environment bring out
+								the best in each member and are crucial in my personal development. </p>
 							<br>
 							<a href="https://docs.google.com/document/d/1IZ3WWUJZpOLDDSI_nMzQHlYMpzwkmdvfGRCNFZi0jJs/edit?usp=sharing"
 								target="_blank" id="resume-effect"><i class="fa fa-3x fa-file-text-o"
@@ -176,29 +187,29 @@
 			</div><!-- .row -->
 			<div class="row">
 				{% for project in list_projects|slice:":4" %}
-					<div class="card col-xs-12 col-sm-5 col-md-5">
-							<div class="grid wow zoomIn">
+				<div class="card col-xs-12 col-sm-5 col-md-5">
+					<div class="grid wow zoomIn">
 
-								<figure class="effect-bubba"><a href="{{ project.url }}" target="_blank">
-									{% with 'mainpage/images/'|add:project.img_name as image_static %}
-											<img class="card-img-top" src="{% static image_static %}"></a>
-									{% endwith %}
-								</figure>
+						<figure class="effect-bubba"><a href="{{ project.url }}" target="_blank">
+								{% with 'mainpage/images/'|add:project.img_name as image_static %}
+								<img class="card-img-top" src="{% static image_static %}"></a>
+							{% endwith %}
+						</figure>
 
-								<div class="card-block">
-									<h2 class="card-title">{{ project.title }}</h2>
-									<p class="card-text">{{ project.description }}</p>
-									<div class="tools">
-										{% for tool in project.tools.split %}
-											<span>{{ tool }}</span>
-										{% endfor %}
-									</div>
-								</div>
-
+						<div class="card-block">
+							<h2 class="card-title">{{ project.title }}</h2>
+							<p class="card-text">{{ project.description }}</p>
+							<div class="tools">
+								{% for tool in project.tools.split %}
+								<span>{{ tool }}</span>
+								{% endfor %}
 							</div>
 						</div>
-					{% endfor %}
+
+					</div>
 				</div>
+				{% endfor %}
+			</div>
 
 	</section>
 
@@ -252,78 +263,87 @@
 	<!-- Experience end -->
 
 
-	<!-- Publication start -->
+	<!-- Online Certificates start -->
 
-	<!-- <section id="publication" class="pfblock">
-		<div class="container"></div>
-		<div class="row">
-
-			<div class="col-sm-6 col-sm-offset-3">
-
-				<div class="pfblock-header">
-					<h2 class="pfblock-title">Publications</h2>
-					<div class="pfblock-line"></div>
-					<div class="pfblock-subtitle">
-
-					</div>
-				</div>
-
-			</div>
-		</div> -->
-		<!-- </div> -->
-
-		<!-- <div class="row"> -->
-<!-- 
-			<div class="col-sm-6 col-sm-offset-3">
-				{% include 'mainpage/contact_form.html' %}
-			</div>
-			<br> -->
-
-
-	<!-- Contact end -->
-
-	<!-- Footer start -->
-
-	<footer id="footer">
+	<section id="certificates" class="pfblock">
 		<div class="container">
 			<div class="row">
-
-				<div class="col-sm-12">
-
-					<ul class="social-links">
-						<li><a href="https://www.linkedin.com/in/fangyiyu/" class="wow fadeInUp" data-wow-delay=".1s"
-								target="_blank"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="https://github.com/fangyiyu" class="wow fadeInUp" data-wow-delay=".2s"
-								target="_blank"><i class="fa fa-github"></i></a></li>
-						<li><a href="mailto:yufangyi@gmail.com" class="wow fadeInUp" data-wow-delay=".4s" target="_blank"><i
-							class="fa fa-envelope"></i></a></li>
-					</ul>
-
-					<p class="copyright"> Feel free to email me, or visit my GitHub and LinkedIn pages.</p>
-
-					<p class="heart">Made with <span class="fa fa-heart fa-2x animated pulse"></span> Canada 2021 ©</p>
-
+				<div class="pfblock-header">
+					<h2 class="pfblock-title">Certificates</h2>
+					<div class="online">
+						<dl>
+							<dt>&#9679<a
+									href="https://certificates.cs50.io/1b061004-136b-48e7-860c-1b7dfba69cee.pdf?size=letter"
+									target="_blank">Web programming with Python and JavaScript </a> by Harvard
+								University</dt>
+							<dd> - Covered topics included: HTML, CSS, Git, Python, Django, SQL, JavaScript, building
+								user
+								interfaces, testing, CI/CD, scalability and security.</dd><br>
+							<dt>&#9679<a
+									href="https://www.coursera.org/account/accomplishments/certificate/YR9BPYJ7KKUW"
+									target="_blank">Managing Big Data with MySQL</a> by Duke University</dt>
+							<dd> - Covered topics included: Using relational databases in business analysis. </dd><br>
+							<dt>&#9679<a
+									href="https://www.coursera.org/account/accomplishments/verify/B5HAY9PQFH5W?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course"
+									target="_blank">Natural Language Processing with Attention Models</a> by
+								Deeplearning.AI</dt>
+							<dd> - Covered topics included: Building attention models for machine translation, text
+								summarization, question answering, and chatbot.</dd><br>
+							<dt>&#9679<a
+									href="https://www.coursera.org/account/accomplishments/certificate/QGQSHDVJPRX3"
+									target="_blank">Convolutional Neural Networks in TensorFlow </a> by Deeplearning.AI
+							</dt>
+							<dd> - Covered topics included: Improving computer vision models using TensorFlow via data
+								augmentation, regularization, and transfer learning.</dd><br>
+						</dl>
+					</div>
 				</div>
+			</div>
+		</div>
 
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</footer>
+		<!-- Footer start -->
 
-	<!-- Footer end -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-sm-12">
+
+						<ul class="social-links">
+							<li><a href="https://www.linkedin.com/in/fangyiyu/" class="wow fadeInUp"
+									data-wow-delay=".1s" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://github.com/fangyiyu" class="wow fadeInUp" data-wow-delay=".2s"
+									target="_blank"><i class="fa fa-github"></i></a></li>
+							<li><a href="mailto:yufangyi@gmail.com" class="wow fadeInUp" data-wow-delay=".4s"
+									target="_blank"><i class="fa fa-envelope"></i></a></li>
+						</ul>
+
+						<p class="copyright"> Feel free to email me, or visit my GitHub and LinkedIn pages.</p>
+
+						<p class="heart">Made with <span class="fa fa-heart fa-2x animated pulse"></span> Canada
+							2021 ©</p>
+
+					</div>
+
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</footer>
+
+		<!-- Footer end -->
 
 
-	<!-- Javascript files -->
+		<!-- Javascript files -->
 
-	<script src="{% static 'mainpage/js/jquery-1.11.1.min.js' %}"></script>
-	<script src="{% static 'mainpage/bootstrap/js/bootstrap.min.js' %}"></script>
-	<script src="{% static 'mainpage/js/jquery.parallax-1.1.3.js' %}"></script>
-	<script src="{% static 'mainpage/js/imagesloaded.pkgd.js' %}"></script>
-	<script src="{% static 'mainpage/js/jquery.sticky.js' %}"></script>
-	<script src="{% static 'mainpage/js/smoothscroll.js' %}"></script>
-	<script src="{% static 'mainpage/js/wow.min.js' %}"></script>
-	<script src="{% static 'mainpage/js/waypoints.min.js' %}"></script>
-	<script src="{% static 'mainpage/js/jquery.cbpQTRotator.js' %}"></script>
-	<script src="{% static 'mainpage/js/custom.js' %}"></script>
+		<script src="{% static 'mainpage/js/jquery-1.11.1.min.js' %}"></script>
+		<script src="{% static 'mainpage/bootstrap/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'mainpage/js/jquery.parallax-1.1.3.js' %}"></script>
+		<script src="{% static 'mainpage/js/imagesloaded.pkgd.js' %}"></script>
+		<script src="{% static 'mainpage/js/jquery.sticky.js' %}"></script>
+		<script src="{% static 'mainpage/js/smoothscroll.js' %}"></script>
+		<script src="{% static 'mainpage/js/wow.min.js' %}"></script>
+		<script src="{% static 'mainpage/js/waypoints.min.js' %}"></script>
+		<script src="{% static 'mainpage/js/jquery.cbpQTRotator.js' %}"></script>
+		<script src="{% static 'mainpage/js/custom.js' %}"></script>
 
 </body>
 
